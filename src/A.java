@@ -26,7 +26,7 @@ public class A
 
         boolean loopiSan = true;
 
-        while(loopiSan){
+        do{
 
             System.out.print("Enter a name for the object: ");
         try{
@@ -40,7 +40,7 @@ public class A
             System.out.println("Error enter a string please!");
         }
 
-        }
+        }while(loopiSan);
 
     }
 
