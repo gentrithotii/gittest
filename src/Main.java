@@ -24,10 +24,10 @@ public class Main {
             A newA = new A();
 
             //Add object name
-            newA.addAName(newA);
+            newA.addAName(userInput);
 
             //Add object age
-            newA.addAAge(newA);
+            newA.addAAge(userInput);
 
 
             //Add the object to the aList

@@ -5,6 +5,7 @@ public class A
     private String aName;
     private int aAge;
 
+
     public  String getAName() { return aName; }
     public void setAName(String aName){ this.aName = aName; }
 
@@ -21,17 +22,15 @@ public class A
     aAge = age;
     }
 
-    public void addAName(A aName){
-        Scanner userInput = new Scanner(System.in);
+    public void addAName(Scanner userInput){
         System.out.print("Enter a name for the object: ");
         String stringAName = userInput.nextLine();
-        aName.setAName(stringAName);
+        this.setAName(stringAName);
     }
 
-    public void addAAge(A aObjectAge){
-        Scanner userInput = new Scanner(System.in);
+    public void addAAge(Scanner userInput){
         System.out.print("Enter the age of the object: ");
         String stringAAge = userInput.nextLine();
-        aObjectAge.aAge = Integer.parseInt(stringAAge);
+        this.aAge = Integer.parseInt(stringAAge);
     }
 }
