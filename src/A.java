@@ -46,9 +46,9 @@ public class A
 
     public void addAAge(Scanner userInput){
 
-        boolean loopiSan = true;
+        boolean loopiSan =true;
 
-        while(loopiSan){
+        do{
         System.out.print("Enter the age of the object: ");
         try{
 
@@ -62,6 +62,7 @@ public class A
 
         }
         }
+        while (loopiSan);
 
     }
 }
