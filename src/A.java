@@ -13,25 +13,44 @@ public class A
     public void setAge(int age){ this.aAge = age; }
 
     public A(){
-        aName = "empty";
-        aAge = 0;
+        this.aName = "empty";
+        this.aAge = 0;
     }
 
     public A(String name, int age){
-    aName = name;
-    aAge = age;
+    this.aName = name;
+    this.aAge = age;
     }
 
     public void addAName(Scanner userInput){
+
         System.out.print("Enter a name for the object: ");
-        String stringAName = userInput.nextLine();
-        this.setAName(stringAName);
+        try{
+
+            String stringAName = userInput.nextLine();
+            this.setAName(stringAName);
+
+        }catch(Exception e){
+
+         System.out.println("Enter a string");
+
+        }
+
     }
 
     public void addAAge(Scanner userInput){
 
         System.out.print("Enter the age of the object: ");
-        String stringAAge = userInput.nextLine();
-        this.aAge = Integer.parseInt(stringAAge);
+        try{
+
+        int convertedNum = Integer.parseInt(userInput.nextLine());
+        this.setAge(convertedNum);
+
+        } catch (NumberFormatException e){
+
+            System.out.println("Invalid input. Enter a number");
+
+        }
+
     }
 }
