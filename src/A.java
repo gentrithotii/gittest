@@ -22,15 +22,17 @@ public class A
     aAge = age;
     }
 
-    public void addAName(Scanner userInput){
+    public void addAName(A aName){
+        Scanner userInput = new Scanner(System.in);
         System.out.print("Enter a name for the object: ");
         String stringAName = userInput.nextLine();
-        this.setAName(stringAName);
+        aName.setAName(stringAName);
     }
 
-    public void addAAge(Scanner userInput){
+    public void addAAge(A aObjectAge){
+        Scanner userInput = new Scanner(System.in);
         System.out.print("Enter the age of the object: ");
         String stringAAge = userInput.nextLine();
-        this.aAge = Integer.parseInt(stringAAge);
+        aObjectAge.aAge = Integer.parseInt(stringAAge);
     }
 }
