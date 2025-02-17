@@ -37,7 +37,7 @@ public class A
 
         }catch(Exception e){
 
-            System.out.println("Enter a string");
+            System.out.println("Error enter a string please!");
         }
 
         }
