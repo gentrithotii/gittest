@@ -24,15 +24,21 @@ public class A
 
     public void addAName(Scanner userInput){
 
-        System.out.print("Enter a name for the object: ");
+        boolean loopiSan = true;
+
+        while(loopiSan){
+
+            System.out.print("Enter a name for the object: ");
         try{
 
             String stringAName = userInput.nextLine();
             this.setAName(stringAName);
+            loopiSan = false;
 
         }catch(Exception e){
 
-         System.out.println("Enter a string");
+            System.out.println("Enter a string");
+        }
 
         }
 
@@ -40,16 +46,21 @@ public class A
 
     public void addAAge(Scanner userInput){
 
+        boolean loopiSan = true;
+
+        while(loopiSan){
         System.out.print("Enter the age of the object: ");
         try{
 
         int convertedNum = Integer.parseInt(userInput.nextLine());
         this.setAge(convertedNum);
+        loopiSan = false;
 
         } catch (NumberFormatException e){
 
             System.out.println("Invalid input. Enter a number");
 
+        }
         }
 
     }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean loopi = false;
+        boolean aLoopi = false;
         System.out.println("Hello and welcome!");
 //        int menuPicked = 0;
         ArrayList<A> aList = new ArrayList<>();
@@ -28,7 +28,6 @@ public class Main {
 
             //Add object age
             newA.addAAge(userInput);
-
 
             //Add the object to the aList
             aList.add(newA);
