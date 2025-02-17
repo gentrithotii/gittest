@@ -34,6 +34,8 @@ public class Main {
             aList.add(newA);
         }
 
+        userInput.close();
+
 
         for(A aItems : aList){
             System.out.print( " " + aItems.getAName() + " " + aItems.getAge() );
