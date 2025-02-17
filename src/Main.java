@@ -14,9 +14,14 @@ public class Main {
 //        newAItem.setAge(1);
 
         Scanner userInput = new Scanner(System.in);
+
         System.out.print("Enter the amount of items you want to add: ");
+        try{
         String stringNum = userInput.nextLine();
         numberOfThingsToAdd = Integer.parseInt(stringNum);
+        }catch(NumberFormatException e){
+            System.out.println("Error m8 enter a number :))))))))))");
+        }
 
 
         for(int i = 1; i <= numberOfThingsToAdd ; i++)
