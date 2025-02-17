@@ -31,8 +31,7 @@ public class A
             System.out.print("Enter a name for the object: ");
         try{
 
-            String stringAName = userInput.nextLine();
-            this.setAName(stringAName);
+            this.aName = userInput.nextLine();
             loopiSan = false;
 
         }catch(Exception e){
