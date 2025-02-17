@@ -2,44 +2,54 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello and welcome!");
         ArrayList<A> aList = new ArrayList<>();
-        int numberOfThingsToAdd = 0;
-
         Scanner userInput = new Scanner(System.in);
 
-        System.out.print("Enter the amount of items you want to add: ");
+        // Get the number of items to add
+        int tries = numberOfTries(userInput);
 
-        try{
-        String stringNum = userInput.nextLine();
-        numberOfThingsToAdd = Integer.parseInt(stringNum);
-        }catch(NumberFormatException e){
-            System.out.println("Error m8 enter a number :))))))))))");
-        }
-
-
-        for(int i = 1; i <= numberOfThingsToAdd ; i++)
-        {
-            A newA = new A();
-
-            //Add object name
-            newA.addAName(userInput);
-
-            //Add object age
-            newA.addAAge(userInput);
-
-            //Add the object to the aList
-            aList.add(newA);
-        }
+        // Populate the list
+        populateListOfA(aList, userInput, tries);
 
         userInput.close();
 
-        for(A aItems : aList){
-            System.out.print( " " + aItems.getAName() + " " + aItems.getAge() );
+        // Display the list
+        displayUsers(aList);
+    }
+
+
+
+    public static int numberOfTries(Scanner userInput) {
+        System.out.print("Enter the number of items you want to add: ");
+        return Integer.parseInt(userInput.nextLine().trim());
+    }
+
+    public static void populateListOfA(ArrayList<A> aList, Scanner userInput, int numberOfTries) {
+        for (int i = 1; i <= numberOfTries; i++) {
+            A newA = new A();
+            newA.addAName(userInput);
+            newA.addAAge(userInput);
+            aList.add(newA);
+        }
+    }
+
+    public static void displayUsers(ArrayList<A> aList) {
+        if (aList.isEmpty()) {
+            System.out.println("No users found.");
+            return;
         }
 
+        for (A aItems : aList) {
+            System.out.println("Name: " + aItems.getAName() +
+                    ", Age: " + aItems.getAge() +
+                    ", Created At: " + aItems.getCreatedAt());
+        }
     }
+
 }
+

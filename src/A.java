@@ -1,13 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.time.LocalDateTime;
 
 public class A
 {
     private String aName;
     private int aAge;
-
+    private final LocalDateTime createdAt;
 
     public  String getAName() { return aName; }
-    public void setAName(String aName){ this.aName = aName; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
 
     public int getAge(){ return aAge; }
     public void setAge(int age){ this.aAge = age; }
@@ -15,11 +18,13 @@ public class A
     public A(){
         this.aName = "empty";
         this.aAge = 0;
+        this.createdAt = LocalDateTime.now();
     }
 
     public A(String name, int age){
     this.aName = name;
     this.aAge = age;
+    this.createdAt = LocalDateTime.now();
     }
 
     public void addAName(Scanner userInput){
@@ -31,7 +36,7 @@ public class A
             System.out.print("Enter a name for the object: ");
         try{
 
-            this.aName = userInput.nextLine();
+            this.aName = userInput.nextLine().trim();
             loopiSan = false;
 
         }catch(Exception e){
@@ -51,7 +56,7 @@ public class A
         System.out.print("Enter the age of the object: ");
         try{
 
-        int convertedNum = Integer.parseInt(userInput.nextLine());
+        int convertedNum = Integer.parseInt(userInput.nextLine().trim());
         this.setAge(convertedNum);
         loopiSan = false;
 
@@ -62,6 +67,5 @@ public class A
         }
         }
         while (loopiSan);
-
     }
 }
