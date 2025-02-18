@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Text here For git Test
+
+
+
         System.out.println("Hello and welcome!");
         ArrayList<A> aList = new ArrayList<>();
         Scanner userInput = new Scanner(System.in);
