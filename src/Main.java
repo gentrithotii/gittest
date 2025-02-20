@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         //First commit for branch
+        //Second commit for branch
 
         System.out.println("Hello and welcome!");
         ArrayList<A> aList = new ArrayList<>();
