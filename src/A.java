@@ -70,4 +70,9 @@ public class A
         }
         while (loopiSan);
     }
+
+    public void returnFullADetails(){
+
+        System.out.println("Name: " + this.getAName() + ", Age: " + this.getAge() + ", Created At: " + this.formatedCreatedAt());
+    }
 }

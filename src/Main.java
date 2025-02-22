@@ -43,7 +43,7 @@ public class Main {
         }
 
         for (A aItems : aList) {
-            System.out.println("Name: " + aItems.getAName() + ", Age: " + aItems.getAge() + ", Created At: " + aItems.formatedCreatedAt());
+            aItems.returnFullADetails();
         }
     }
 
