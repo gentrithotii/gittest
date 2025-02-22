@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 
@@ -9,8 +9,6 @@ public class A
     private final LocalDateTime createdAt;
 
     public  String getAName() { return aName; }
-
-    public LocalDateTime getCreatedAt() { return createdAt; }
 
     public int getAge(){ return aAge; }
     public void setAge(int age){ this.aAge = age; }
@@ -25,6 +23,10 @@ public class A
     this.aName = name;
     this.aAge = age;
     this.createdAt = LocalDateTime.now();
+    }
+    public String formatedCreatedAt(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss a");
+        return this.createdAt.format(formatter);
     }
 
     public void addAName(Scanner userInput){

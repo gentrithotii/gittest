@@ -11,11 +11,8 @@ public class Main {
         ArrayList<A> aList = new ArrayList<>();
         Scanner userInput = new Scanner(System.in);
 
-        // Get the number of items to add
-        int tries = numberOfTries(userInput);
-
         // Populate the list
-        populateListOfA(aList, userInput, tries);
+        populateListOfA(aList, userInput, numberOfTries(userInput));
 
         userInput.close();
 
@@ -46,9 +43,7 @@ public class Main {
         }
 
         for (A aItems : aList) {
-            System.out.println("Name: " + aItems.getAName() +
-                    ", Age: " + aItems.getAge() +
-                    ", Created At: " + aItems.getCreatedAt());
+            System.out.println("Name: " + aItems.getAName() + ", Age: " + aItems.getAge() + ", Created At: " + aItems.formatedCreatedAt());
         }
     }
 
